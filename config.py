@@ -11,7 +11,7 @@ DB_DIALECT = get_env_var("DB_DIALECT", "sqlite")
 if DB_DIALECT == "mysql":
     DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 elif DB_DIALECT == "sqlite":
-    DATABASE_URL = f"sqlite:///./{DB_NAME}.db"
+    DATABASE_URL = f"sqlite:///./{DB_NAME}.sqlite3"
 else:
     raise ValueError(f"Unsupported DB_DIALECT: {DB_DIALECT}")
 
